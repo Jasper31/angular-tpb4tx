@@ -1,0 +1,9 @@
+<p>Product Detail</p>
+
+<div *ngIf="product">
+  <h3>{{ product.name }}</h3>
+  <h4>{{ product.price | currency }}</h4>
+  <!-- transform product.price from number to currency string using a pipe-->
+  <p>{{ product.description }}</p>
+  <button type="button" (click)="addToCart(product)">Buy</button>
+</div>
